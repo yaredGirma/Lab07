@@ -1,0 +1,20 @@
+//books and studnet have many to many relation so keep array of key from eachother 
+//since librarian is going to access the books to see retrn date we must keep student id and return date in books collection
+
+books {
+__id:ObjectId("4e54ed9f48dc5922c0094a40"),
+keyword:['programming','java','object oriented programming'],
+isbn:'isbn1',
+student_ids:[
+			{student_id:ObjectId("52ffc4a5d85242602e000000"),return_date:new Date()},
+			{student_id:ObjectId("52ffc4a5d85242602e000001"),return_date:new Date()}
+			],
+author:'biniam'
+}
+
+
+student{
+__id:ObjectId("4e54ed9f48dc5922c0094a40"),
+name:'abrehm',
+books_ids:[ObjectId("4e54ed9f48dc5922c0094a40"),ObjectId("4e54ed9f48dc5922c0094a40")]
+}
